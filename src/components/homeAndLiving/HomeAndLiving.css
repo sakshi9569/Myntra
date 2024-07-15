@@ -1,0 +1,254 @@
+/* Main container styling */
+.home-and-living-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 2s; /* Smooth transition for background color change */
+    position: relative; /* Ensure relative positioning for children */
+  }
+  
+  .virtual-try-on-heading {
+    color: #fff;
+    font-size: 3em;
+    text-align: center;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Text shadow for DJ lights effect */
+  }
+  
+  /* Gift voucher message */
+  .gift-voucher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 20px;
+    background-color: #ffc107;
+    border: 1px solid #ffeeba;
+    border-radius: 10px;
+    z-index: 1000; /* Ensure above other content */
+    text-align: center;
+  }
+  
+  .gift-voucher p {
+    color: #856404;
+  }
+  
+  /* Content wrapper for layout adjustment */
+  .content-wrapper {
+    display: flex;
+    justify-content: space-around; /* Adjust space between controls and avatar */
+    width: 100%;
+    max-width: 1200px; /* Limit maximum width for better readability */
+    margin-top: 20px;
+  }
+  
+  /* Controls section */
+  .controls {
+    flex: 1; /* Take up remaining space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 20px; /* Add margin to separate from avatar */
+  }
+  
+  .controls h2 {
+    color: #495057;
+    margin-bottom: 10px;
+  }
+  
+  /* Clothing items */
+  .clothing-items {
+    display: flex;
+    gap: 10px; /* Space between items */
+    margin-bottom: 20px;
+    align-items: center; /* Align items horizontally */
+  }
+  
+  .clothing-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .clothing-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .clothing-item p {
+    color: #495057;
+    margin-top: 5px; /* Adjust spacing */
+  }
+  
+  .clothing-item:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Image selector */
+  .image-selector {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: center; /* Center items horizontally */
+  }
+  
+  .image-selector img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .image-selector img.selected {
+    transform: scale(1.1);
+  }
+  
+  /* Adjust model size controls */
+  .label-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  label {
+    color: #495057;
+    margin-bottom: 5px;
+  }
+  
+  input[type="number"] {
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    width: 80px; /* Adjusted width */
+    font-family: 'Arial', sans-serif; /* Changed font */
+  }
+  
+  /* Rotate avatar button */
+  button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  /* Avatar container styles */
+  .avatar-container {
+    position: relative; /* Ensure relative positioning for absolute background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 400px; /* Fixed width */
+    height: 600px; /* Fixed height */
+    overflow: hidden; /* Prevent overflow of animated background */
+  }
+  
+  /* Avatar styling */
+  .avatar {
+    position: relative; /* Ensure relative positioning for absolute background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 2px dashed #adb5bd;
+    border-radius: 10px;
+    height: 200px; /* Default height */
+    width: 200px; /* Default width */
+    transition: height 0.3s, width 0.3s;
+    z-index: 1; /* Ensure avatar is above the background */
+  }
+  
+  .avatar p {
+    color: #6c757d;
+    font-size: 1.2em;
+    text-align: center;
+  }
+  
+  /* Background color animation */
+  @keyframes backgroundAnimation {
+    0% {
+      background-color: #ff9a9e;
+    }
+    25% {
+      background-color: #fad0c4;
+    }
+    50% {
+      background-color: #bad4ff;
+    }
+    75% {
+      background-color: #ff6961;
+    }
+    100% {
+      background-color: #ff9a9e;
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .home-and-living-container {
+      padding: 10px;
+    }
+  
+    .content-wrapper {
+      flex-direction: column; /* Stack controls and avatar vertically on smaller screens */
+      align-items: center;
+    }
+  
+    .controls {
+      width: 100%; /* Full width on smaller screens */
+      margin-right: 0; /* Remove margin */
+      margin-bottom: 20px; /* Add space at bottom */
+    }
+  
+    .clothing-items {
+      flex-direction: column; /* Align items vertically on smaller screens */
+      align-items: center;
+    }
+  
+    .avatar-container {
+      width: 100%; /* Full width on smaller screens */
+      max-width: 100%; /* Max width on smaller screens */
+      height: auto; /* Auto height on smaller screens */
+    }
+  
+    .avatar {
+      height: 150px;
+      width: 150px; /* Adjusted width for smaller screens */
+    }
+  }
+  
